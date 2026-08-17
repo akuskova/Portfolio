@@ -4,6 +4,11 @@ import Navbar from "./components/Navbar"
 import AboutMe from "./pages/AboutMe"
 import Contact from "./pages/Contact"
 import Projects from "./pages/Projects"
+import Browzen from "./pages/Browzen"
+import Starvest from "./pages/Starvest"
+import DHA from "./pages/DHA"
+import Home from "./pages/Home"
+import SearchEngine from "./pages/SearchEngine"
 
 function App() {
   let component
@@ -17,8 +22,20 @@ function App() {
     case "/contact":
       component = <Contact />
       break
+    case "/projects/browzen":
+      component = <Browzen />
+      break
+    case "/projects/starvest":
+      component = <Starvest />
+      break
+    case "/projects/dha":
+      component = <DHA />
+      break
+    case "/projects/search-engine":
+      component = <SearchEngine />
+      break
     default:
-      component = <AboutMe />
+      component = <Home />
   }
   return (
       <>
