@@ -13,7 +13,7 @@ export default function API() {
 
   const fetchData = async () => {
     try {
-      const response = await fetch('http://localhost:3001/api/data')
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/api/data`)
       if (!response.ok) throw new Error(`API responded with ${response.status}`)
       const data = await response.json()
       setPhoto(data)
