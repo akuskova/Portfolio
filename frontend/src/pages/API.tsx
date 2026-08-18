@@ -1,8 +1,57 @@
+import { useEffect, useState } from "react"
+
+interface Photo {
+  id: number
+  src: { medium: string; large: string }
+  alt: string
+  photographer: string
+}
+
 export default function API() {
-    return (
-        <div className="min-h-screen w-full flex items-center justify-center text-center flex-col gap-6 p-20">
-            <h1 className="text-5xl font-bold">API</h1>
-            <p className="text-xl max-w-2xl">Description of the project goes here — what it does, your role, tech used.</p>
-        </div>
-    )
+  const [photo, setPhoto] = useState<Photo | null>(null)
+  const [status, setStatus] = useState<"loading" | "loaded" | "error">("loading")
+
+  const fetchData = async () => {
+    try {
+      const response = await fetch('http://localhost:3001/api/data')
+      if (!response.ok) throw new Error(`API responded with ${response.status}`)
+      const data = await response.json()
+      setPhoto(data)
+      setStatus("loaded")
+    } catch (error) {
+      console.error('Error fetching data:', error)
+      setStatus("error")
+    }
+  }
+
+    useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect
+    fetchData()
+    }, [])
+
+  const handleClick = () => {
+    setStatus("loading")
+    fetchData()
+  }
+
+  return (
+    <div className="min-h-screen w-full relative bg-linear-to-r from-blue-900 via-cyan-700 to-teal-400 flex items-center justify-center text-center flex-col gap-10 text-white p-52">
+      <h1 className="text-5xl font-bold">API</h1>
+      <p className="text-xl max-w-2xl">Generate Random Image :3</p>
+
+      {status === "loading" && <p>Loading photo...</p>}
+      {status === "error" && <p className="text-red-400">Couldn't load photo.</p>}
+      {status === "loaded" && photo?.src && (
+        <img src={photo.src.large} alt={photo.alt} className="rounded-lg max-w-xl w-full h-auto" />
+      )}
+
+      <button
+        onClick={handleClick}
+        disabled={status === "loading"}
+        className="bg-white text-black px-6 py-3 rounded-full font-bold hover:bg-gray-200 transition disabled:opacity-50"
+      >
+        {status === "loading" ? "Loading..." : "New Random Image"}
+      </button>
+    </div>
+  )
 }
