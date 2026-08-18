@@ -9,38 +9,24 @@ import Starvest from "./pages/Starvest"
 import DHA from "./pages/DHA"
 import Home from "./pages/Home"
 import SearchEngine from "./pages/SearchEngine"
+import API from "./pages/API"
+import { Route, Routes } from "react-router-dom"
 
 function App() {
-  let component
-  switch(window.location.pathname) {
-    case "/about":
-      component = <AboutMe />
-      break
-    case "/projects":
-      component = <Projects />
-      break
-    case "/contact":
-      component = <Contact />
-      break
-    case "/projects/browzen":
-      component = <Browzen />
-      break
-    case "/projects/starvest":
-      component = <Starvest />
-      break
-    case "/projects/dha":
-      component = <DHA />
-      break
-    case "/projects/search-engine":
-      component = <SearchEngine />
-      break
-    default:
-      component = <Home />
-  }
   return (
       <>
       <Navbar />
-      {component}
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<AboutMe />} />
+        <Route path="/projects" element={<Projects />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/api" element={<API />} />
+        <Route path="/projects/browzen" element={<Browzen />} />
+        <Route path="/projects/starvest" element={<Starvest />} />
+        <Route path="/projects/dha" element={<DHA />} />
+        <Route path="/projects/search-engine" element={<SearchEngine />} />
+      </Routes>
       <Footer />
       </>
     )

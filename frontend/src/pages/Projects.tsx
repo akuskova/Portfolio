@@ -5,6 +5,7 @@ export default function Projects(){
             <p className="text-2xl">Browzen </p>
             <p className="text-2xl">Starvest </p>
             <p className="text-2xl">DHA</p>
+            <p className="text-2xl">Search Engine</p>
         </div>
     )
 }
