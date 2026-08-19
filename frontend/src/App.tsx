@@ -10,22 +10,26 @@ import DHA from "./pages/DHA"
 import Home from "./pages/Home"
 import SearchEngine from "./pages/SearchEngine"
 import API from "./pages/API"
+
 import { Route, Routes } from "react-router-dom"
+import PageLayout from "./components/PageLayout"
 
 function App() {
   return (
       <>
       <Navbar />
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<AboutMe />} />
-        <Route path="/projects" element={<Projects />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/api" element={<API />} />
-        <Route path="/projects/browzen" element={<Browzen />} />
-        <Route path="/projects/starvest" element={<Starvest />} />
-        <Route path="/projects/dha" element={<DHA />} />
-        <Route path="/projects/search-engine" element={<SearchEngine />} />
+        <Route element={<PageLayout />}>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<AboutMe />} />
+          <Route path="/projects" element={<Projects />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/api" element={<API />} />
+          <Route path="/projects/browzen" element={<Browzen />} />
+          <Route path="/projects/starvest" element={<Starvest />} />
+          <Route path="/projects/dha" element={<DHA />} />
+          <Route path="/projects/search-engine" element={<SearchEngine />} />
+        </Route>
       </Routes>
       <Footer />
       </>

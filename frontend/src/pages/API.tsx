@@ -35,7 +35,7 @@ export default function API() {
   }
 
   return (
-    <div className="min-h-screen w-full relative bg-linear-to-r from-blue-900 via-cyan-700 to-teal-400 flex items-center justify-center text-center flex-col gap-10 text-white p-52">
+    <>
       <h1 className="text-5xl font-bold">API</h1>
       <p className="text-xl max-w-2xl">Generate Random Image :3</p>
 
@@ -52,6 +52,6 @@ export default function API() {
       >
         {status === "loading" ? "Loading..." : "New Random Image"}
       </button>
-    </div>
+    </>
   )
 }

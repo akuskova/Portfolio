@@ -1,14 +1,21 @@
-import { Link } from "react-router-dom"
+import Card from "../components/Card"
 
-export default function Projects(){
-    return(
-        <div className="min-h-screen w-full relative bg-linear-to-r from-blue-900 via-cyan-700 to-teal-400 flex items-center justify-center text-center flex-col gap-10 text-white p-52">
-            <h1 className="text-6xl font-bold">Projects</h1>
-            <Link to="/projects/browzen" className="block px-4 py-2 text-lg hover:underline">Browzen</Link>
-            <Link to="/projects/starvest" className="block px-4 py-2 text-lg hover:underline">Starvest</Link>
-            <Link to="/projects/dha" className="block px-4 py-2 text-lg hover:underline">DHA</Link>
-            <Link to="/projects/search-engine" className="block px-4 py-2 text-lg hover:underline">Search Engine</Link>
-        </div>
-    )
+const projects = [
+  { title: "Browzen", description: "AI-powered Chrome extension that navigates confusing websites on behalf of users with cognitive disabilities.", to: "/projects/browzen" },
+  { title: "Starvest", description: "Mobile app that turns satellite and weather data into personalized crop recommendations for farmers.", to: "/projects/starvest" },
+  { title: "DHA", description: "Rebuilt the Downtown Hamilton Association's website with a searchable map-based business directory over a 16-week client engagement.", to: "/projects/dha" },
+  { title: "Search Engine", description: "Disk-aware search engine over 56,000 web pages with sub-300 ms queries — no external infrastructure required.", to: "/projects/search-engine" },
+]
+
+export default function Projects() {
+  return (
+    <div className="min-h-screen w-full flex items-center justify-start flex-col gap-10 text-white p-20">
+      <h1 className="text-5xl font-bold">Projects</h1>
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-4xl w-full">
+        {projects.map((project) => (
+          <Card key={project.to} {...project} />
+        ))}
+      </div>
+    </div>
+  )
 }
-
