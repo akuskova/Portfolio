@@ -16,11 +16,11 @@ export default function Navbar() {
 
         <div className="relative group">
           <NavLink to="/projects" className={projectsLinkClass}>Projects</NavLink>
-          <div className="absolute left-0 mt-2 w-40 bg-black/80 rounded-md shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-            <Link to="/projects/browzen" className="block px-4 py-2 hover:bg-gray-700">Browzen</Link>
-            <Link to="/projects/starvest" className="block px-4 py-2 hover:bg-gray-700">Starvest</Link>
-            <Link to="/projects/dha" className="block px-4 py-2 hover:bg-gray-700">DHA</Link>
-            <Link to="/projects/search-engine" className="block px-4 py-2 hover:bg-gray-700">Search Engine</Link>
+          <div className= "absolute left-0 pt-2 w-40 bg-black/60 rounded-md shadow-lg opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto transition-opacity duration-300">
+            <Link to="/projects/browzen" className="block px-4 py-2 hover:bg-gray-700/80">Browzen</Link>
+            <Link to="/projects/starvest" className="block px-4 py-2 hover:bg-gray-700/80">Starvest</Link>
+            <Link to="/projects/dha" className="block px-4 py-2 hover:bg-gray-700/80">DHA</Link>
+            <Link to="/projects/search-engine" className="block px-4 py-2 hover:bg-gray-700/80">Search Engine</Link>
           </div>
         </div>
 
