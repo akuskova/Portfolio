@@ -10,7 +10,6 @@ import DHA from "./pages/DHA"
 import Home from "./pages/Home"
 import SearchEngine from "./pages/SearchEngine"
 import API from "./pages/API"
-
 import { Route, Routes } from "react-router-dom"
 import PageLayout from "./components/PageLayout"
 
