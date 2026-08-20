@@ -1,4 +1,5 @@
 import Card from "../components/Card"
+import Hero from "../components/Hero"
 
 const projects = [
   { title: "Browzen", description: "AI-powered Chrome extension that navigates confusing websites on behalf of users with cognitive disabilities.", to: "/projects/browzen" },
@@ -9,14 +10,17 @@ const projects = [
 
 export default function Projects() {
   return (
-    <div className="min-h-screen w-full flex items-center justify-start flex-col gap-10 text-white p-20">
-      <h1 className="text-5xl font-bold">Projects</h1>
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-4xl w-full">
-        {projects.map((project) => (
-          <Card key={project.to} {...project} />
-        ))}
+    <Hero>
+      <div className="min-h-screen text-white px-4 py-8 md:px-20 md:py-20">
+        <h1 className="text-3xl md:text-5xl font-bold text-center mb-8 md:mb-12">Projects</h1>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6">
+          {projects.map((project) => (
+            <Card key={project.to} {...project} />
+          ))}
+        </div>
       </div>
-
-    </div>
+    </Hero>
   )
 }
+
+
