@@ -41,7 +41,7 @@ export default function API() {
       <p className="text-xl max-w-2xl">Generate Random Image :3</p>
 
       {status === "loading" && <p>Loading photo...</p>}
-      {status === "loading" && <Loading fullscreen={false} message="Loading photo…" />}
+      {status === "loading" && <Loading fullscreen={false} />}
       {status === "loaded" && photo?.src && (
         <img src={photo.src.large} alt={photo.alt} className="rounded-lg max-w-xl w-full h-auto" />
       )}

@@ -12,6 +12,7 @@ import SearchEngine from "./pages/SearchEngine"
 import API from "./pages/API"
 import { Route, Routes } from "react-router-dom"
 import PageLayout from "./components/PageLayout"
+import ProjectLayout from "./components/ProjectLayout"
 
 function App() {
   return (
@@ -24,10 +25,12 @@ function App() {
           <Route path="/projects" element={<Projects />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/api" element={<API />} />
-          <Route path="/projects/browzen" element={<Browzen />} />
-          <Route path="/projects/starvest" element={<Starvest />} />
-          <Route path="/projects/dha" element={<DHA />} />
-          <Route path="/projects/search-engine" element={<SearchEngine />} />
+          <Route element={<ProjectLayout />}>
+            <Route path="/projects/browzen" element={<Browzen />} />
+            <Route path="/projects/starvest" element={<Starvest />} />
+            <Route path="/projects/dha" element={<DHA />} />
+            <Route path="/projects/search-engine" element={<SearchEngine />} />
+          </Route>
         </Route>
       </Routes>
       <Footer />

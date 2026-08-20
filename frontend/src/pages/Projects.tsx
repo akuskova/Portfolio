@@ -16,6 +16,7 @@ export default function Projects() {
           <Card key={project.to} {...project} />
         ))}
       </div>
+
     </div>
   )
 }
