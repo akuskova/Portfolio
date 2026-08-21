@@ -11,7 +11,7 @@ export default function Navbar() {
   const closeMenu = () => setMenuOpen(false);
   return (
     <nav className="fixed top-0 w-full flex items-center justify-between px-8 py-4 bg-black/30 backdrop-blur text-white z-50">
-      <span className="font-bold text-xl">Anna Kuskova</span>
+      <Link to="/" className="font-bold text-xl">Anna Kuskova</Link>
 
       <div className="hidden md:flex gap-8">
         <NavLink to="/" className={navLinkClass}>Home</NavLink>
