@@ -78,7 +78,7 @@ app.get('/api/data', async (req, res) => {  //async is a promise to get informat
   }
 })
 
-
+// API Caption for the image
 app.post('/api/caption', async (req, res) => {
   console.log("Key loaded?", process.env.ANTHROPIC_API_KEY?.slice(0, 10));
   try {
