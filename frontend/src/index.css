@@ -1,1 +1,23 @@
 @import "tailwindcss";
+
+@theme {
+  --color-midnight:     #0f1520;   /* deeper than evening */
+  --color-evening:      #192231;   /* page bg */
+  --color-stormy:       #494E6B;   /* surfaces */
+  --color-storm-light:  #5c6280;   /* surface hover */
+  --color-cloud:        #98878F;   /* muted / secondary text */
+  --color-moonlight:    #e8dfe2;   /* PRIMARY text — new */
+  --color-sunset-deep:  #7a4a58;   /* button pressed */
+  --color-sunset:       #985E6D;   /* accent / CTA */
+  --color-sunset-glow:  #b47380;   /* button hover */
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes shimmer {
+  0%   { background-position: -1000px 0; }
+  100% { background-position: 1000px 0; }
+}

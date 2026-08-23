@@ -11,7 +11,7 @@ const projects = [
 export default function Projects() {
   return (
     <Hero>
-      <div className="min-h-screen text-white px-4 py-8 md:px-20 md:py-20">
+      <div className="min-h-screen text-moonlight px-4 py-8 md:px-20 md:py-20">
         <h1 className="text-3xl md:text-5xl font-bold text-center mb-8 md:mb-12">Projects</h1>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6">
           {projects.map((project) => (

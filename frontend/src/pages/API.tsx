@@ -104,7 +104,7 @@ export default function API() {
       <button
         onClick={handleClick}
         disabled={status === "loading"}
-        className="bg-white text-black px-6 py-3 rounded-full font-bold hover:bg-gray-200 transition disabled:opacity-50"
+        className="bg-sunset text-evening px-6 py-3 rounded-full font-bold hover:bg-sunset-glow active:bg-sunset-deep transition disabled:opacity-50 hover:scale-105 active:scale-95"
       >
         {status === "loading" ? "Loading..." : "New Random Image"}
       </button>
