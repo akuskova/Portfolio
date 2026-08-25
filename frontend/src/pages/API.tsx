@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react"
 import Loading from "../components/LoadingScreen";
+import NightSky from "../components/NightSky";
 
 interface Photo {
   id: number
@@ -75,19 +76,20 @@ export default function API() {
     };
 
   return (
-    <div className="min-h-[calc(100vh-5rem)] flex flex-col items-center justify-start text-center gap-6 p-8 pt-20 md:pt-15">
-      <h1 className="text-5xl font-bold">API</h1>
+    <NightSky>
+    <div className="min-h-[calc(100vh-5rem)] flex flex-col items-center justify-start text-center gap-6 p-8 pt-20 md:pt-7 md:pb-32">
+      <h1 className="text-5xl font-bold animate-[fadeInUp_0.6s_ease-out]">API</h1>
       {status === "loading" && <Loading fullscreen={false} />}
       {status === "loaded" && photo?.src && (
         <>
           <img
             src={photo.src.large}
             alt={photo.alt}
-            className="rounded-lg max-w-xl w-full h-auto"
+            className="rounded-lg max-w-xl w-full h-auto animate-[fadeInUp_0.6s_ease-out_0.15s_backwards]"
           />
 
           {/* Caption row — reserves min-height so button doesn't jump around while caption loads */}
-          <div className="max-w-xl min-h-[3rem] flex items-center justify-center">
+          <div className="max-w-xl min-h-[3rem] flex items-center justify-center animate-[fadeInUp_0.6s_ease-out_0.25s_backwards]">
             {captionStatus === "loading" && (
               <p className="text-white/60 italic">Generating caption…</p>
             )}
@@ -104,10 +106,11 @@ export default function API() {
       <button
         onClick={handleClick}
         disabled={status === "loading"}
-        className="bg-sunset text-evening px-6 py-3 rounded-full font-bold hover:bg-sunset-glow active:bg-sunset-deep transition disabled:opacity-50 hover:scale-105 active:scale-95"
+        className="bg-sunset text-evening px-6 py-3 rounded-full font-bold hover:bg-sunset-glow active:bg-sunset-deep transition disabled:opacity-50 hover:scale-105 active:scale-95 animate-[fadeInUp_0.6s_ease-out_0.35s_backwards]"
       >
         {status === "loading" ? "Loading..." : "New Random Image"}
       </button>
     </div>
+    </NightSky>
   )
 }

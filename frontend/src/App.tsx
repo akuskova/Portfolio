@@ -2,7 +2,6 @@
 import Footer from "./components/Footer"
 import Navbar from "./components/Navbar"
 import AboutMe from "./pages/AboutMe"
-import Contact from "./pages/Contact"
 import Projects from "./pages/Projects"
 import Browzen from "./pages/Browzen"
 import Starvest from "./pages/Starvest"
@@ -23,7 +22,6 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<AboutMe />} />
           <Route path="/projects" element={<Projects />} />
-          <Route path="/contact" element={<Contact />} />
           <Route path="/api" element={<API />} />
           <Route element={<ProjectLayout />}>
             <Route path="/projects/browzen" element={<Browzen />} />
@@ -35,6 +33,7 @@ function App() {
       </Routes>
       <Footer />
       </>
+
     )
 
 }
