@@ -11,8 +11,8 @@ const STARS = Array.from({ length: 60 }, () => ({
 interface NightSkyProps {
   children: ReactNode;
   className?: string;
-  stars?: boolean;    // show star field (default true)
-  aurora?: boolean;   // show aurora blobs (default true)
+  stars?: boolean;    
+  aurora?: boolean;   
 }
 
 export default function NightSky({

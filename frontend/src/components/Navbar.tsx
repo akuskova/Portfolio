@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { NavLink, Link } from "react-router-dom";
-import { FaEnvelope, FaLinkedin, FaGithub } from "react-icons/fa";
 
 const navLinkClass = ({ isActive }: { isActive: boolean }) =>
   `relative inline-block transition
@@ -27,8 +26,7 @@ export default function Navbar() {
       <Link
         to="/"
         onClick={closeMenu}
-        className="font-bold text-xl text-moonlight hover:text-sunset transition"
-      >
+        className="font-bold text-xl text-moonlight hover:text-sunset transition">
         Anna Kuskova
       </Link>
 
