@@ -1,6 +1,8 @@
 @import "tailwindcss";
 
 @theme {
+  --font-sans: 'Space Grotesk', system-ui, sans-serif;
+  --font-mono: 'Space Mono', 'Courier New', monospace;
   --color-midnight:     #0f1520;   /* deeper than evening */
   --color-evening:      #192231;   /* page bg */
   --color-stormy:       #494E6B;   /* surfaces */

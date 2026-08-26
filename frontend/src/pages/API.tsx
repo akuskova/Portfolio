@@ -78,7 +78,7 @@ export default function API() {
   return (
     <NightSky>
     <div className="min-h-[calc(100vh-5rem)] flex flex-col items-center justify-start text-center gap-6 p-8 pt-20 md:pt-7 md:pb-32">
-      <h1 className="text-5xl font-bold animate-[fadeInUp_0.6s_ease-out]">API</h1>
+      <h1 className=" text-5xl font-bold animate-[fadeInUp_0.6s_ease-out]">API</h1>
       {status === "loading" && <Loading fullscreen={false} />}
       {status === "loaded" && photo?.src && (
         <>
@@ -89,7 +89,7 @@ export default function API() {
           />
 
           {/* Caption row — reserves min-height so button doesn't jump around while caption loads */}
-          <div className="max-w-xl min-h-[3rem] flex items-center justify-center animate-[fadeInUp_0.6s_ease-out_0.25s_backwards]">
+          <div className="max-w-xl min-h-12 flex items-center justify-center animate-[fadeInUp_0.6s_ease-out_0.25s_backwards]">
             {captionStatus === "loading" && (
               <p className="text-white/60 italic">Generating caption…</p>
             )}

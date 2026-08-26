@@ -1,21 +1,35 @@
-import NightSky from "../components/NightSky"
-import { useLockScroll } from "../hooks/useLockScroll"
+import NightSky from "../components/NightSky";
+import { useLockScroll } from "../hooks/useLockScroll";
 
 export default function AboutMe() {
-  useLockScroll()
+  useLockScroll();
 
   return (
     <NightSky className="min-h-[calc(100vh-5rem)]">
-      <div className="min-h-[calc(100vh-5rem)] flex flex-col items-center justify-center text-center gap-6 p-8">
-        <h1 className="text-3xl md:text-6xl font-bold animate-[fadeInUp_0.6s_ease-out]">
-          About Me
-        </h1>
-        <p className="text-base md:text-2xl max-w-2xl animate-[fadeInUp_0.6s_ease-out_0.15s_backwards]">
-          I am a passionate software developer with experience in building web applications using modern technologies. I enjoy solving complex problems and continuously learning new skills.
-        </p>
-        <p className="text-base md:text-2xl max-w-2xl animate-[fadeInUp_0.6s_ease-out_0.25s_backwards]">
-          In my free time, I like to contribute to open-source projects and explore new programming languages and frameworks.
-        </p>
+      <div className="min-h-[calc(100vh-5rem)] flex flex-col md:flex-row items-center justify-center gap-8 md:gap-12 p-8 max-w-5xl mx-auto">
+
+        <img
+          src="/assets/profilePic.jpeg"
+          alt="Anna Kuskova"
+          className="w-48 h-48 md:w-64 md:h-64 rounded-full object-cover shrink-0
+                     transition duration-500 hover:scale-110 hover:shadow-2xl hover:shadow-sunset/40
+                     animate-[fadeInUp_0.6s_ease-out]"
+        />
+
+        <div className="flex flex-col gap-6 text-center md:text-left">
+          <p className="text-lg md:text-3xl text-moonlight leading-relaxed animate-[fadeInUp_0.6s_ease-out_0.15s_backwards]">
+            I'm a computer science student at UC Irvine, minoring in statistics.
+          </p>
+
+          <p className="text-base md:text-xl text-cloud leading-relaxed animate-[fadeInUp_0.6s_ease-out_0.25s_backwards]">
+            The work I'm drawn to focuses on making websites more usable for the communities existing tools leave behind. Accessible interfaces, simpler forms, and small changes that make daily tasks less exhausting for the people who need them most.
+          </p>
+
+          <p className="text-base md:text-xl text-cloud leading-relaxed animate-[fadeInUp_0.6s_ease-out_0.45s_backwards]">
+            Currently: looking for internships and collaborators working on software that reaches real people. <a href="mailto:anna.kuskova@email.com" className="text-sunset hover:underline ">Reach out</a> any time.
+          </p>
+        </div>
+
       </div>
     </NightSky>
   );
