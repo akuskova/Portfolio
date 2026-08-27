@@ -26,8 +26,25 @@ export default function AboutMe() {
           </p>
 
           <p className="text-base md:text-xl text-cloud leading-relaxed animate-[fadeInUp_0.6s_ease-out_0.45s_backwards]">
-            Currently: looking for internships and collaborators working on software that reaches real people. <a href="mailto:anna.kuskova@email.com" className="text-sunset hover:underline ">Reach out</a> any time.
+            Currently: looking for internships and collaborators working on software that reaches real people. Reach out any time.
           </p>
+
+          <div className="flex gap-4 justify-center md:justify-start">
+            <a
+              href="mailto:anna.kuskova@email.com"
+              className="bg-sunset text-evening font-bold px-6 py-3 rounded-full hover:bg-sunset-glow transition"
+            >
+              Get in touch
+            </a>
+            <a
+              href="/assets/AnnaKResume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="border-2 border-moonlight text-moonlight font-bold px-6 py-3 rounded-full hover:border-sunset hover:text-sunset transition"
+            >
+              View resume
+            </a>
+          </div>
         </div>
 
       </div>
