@@ -8,7 +8,7 @@ export default function Home() {
     <NightSky className="min-h-screen">
         
         {/* Content — on top of both background layers */}
-        <div className="relative z-10 flex flex-col justify-center md:justify-end pl-4 pb-4 md:pl-15 md:pb-17 gap-4 min-h-[calc(100vh-5rem-4rem)]">
+        <div className="relative z-10 flex flex-col justify-center md:justify-end pl-4 pb-4 md:pl-13 md:pb-50 lg:pb-20 lg:pl-15 gap-4 min-h-[calc(100vh-5rem-4rem)]">
             <h1 className=" text-4xl md:text-6xl font-bold text-moonlight animate-[fadeInUp_0.6s_ease-out]">
             Hi, I'm Anna Kuskova.
             </h1>
