@@ -1,6 +1,14 @@
 <!doctype html>
 <html lang="en">
   <head>
+    <style>
+      html, body, #root {
+        min-height: 100%;
+        margin: 0;
+        background: #192231;
+        color: #e8dfe2;
+      }
+    </style>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/png" href="/assets/favicon-32.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -17,14 +25,7 @@
     </noscript>
     <title>Anna Kuskova - Portfolio</title>
     <script>
-  if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.getRegistrations().then(regs => {
-      regs.forEach(r => r.unregister());
-    });
-    if (window.caches) {
-      caches.keys().then(names => names.forEach(n => caches.delete(n)));
-    }
-  }
+  
 </script>
   </head>
   <body>
