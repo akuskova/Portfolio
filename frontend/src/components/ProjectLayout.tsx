@@ -7,7 +7,10 @@ export default function ProjectLayout() {
   return (
     <div className="flex flex-col gap-4 items-center">
         <Outlet />
-        <Link to="/projects" className=" inline-block mt-6 mb-15">
+        <Link
+        to="/projects"
+        className="relative z-10 inline-block mt-2 mb-13"
+      >
             <FontAwesomeIcon icon={faRotateLeft} className="text-3xl text-white" />
         </Link>
     </div>

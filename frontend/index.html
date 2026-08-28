@@ -2,12 +2,26 @@
 <html lang="en">
   <head>
     <style>
-      html, body, #root {
+      html {
+      background: #192231;
+      min-height: 100%;
+      margin: 0;
+    }
+      body, #root {
+        background: transparent;
         min-height: 100%;
         margin: 0;
-        background: #192231;
         color: #e8dfe2;
       }
+      @media (max-width: 767px) {
+      body {
+        background:
+          radial-gradient(ellipse at top right, rgba(152, 94, 109, 0.25), transparent 55%),
+          radial-gradient(ellipse at bottom left, rgba(73, 78, 107, 0.4), transparent 55%),
+          #192231;
+        background-attachment: fixed;
+      }
+  }
     </style>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/png" href="/assets/favicon-32.png" />

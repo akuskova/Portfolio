@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
 import { useLockScroll } from '../hooks/useLockScroll';
 import NightSky from '../components/NightSky';
 

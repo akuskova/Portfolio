@@ -8,12 +8,12 @@ export function useLockScroll() {
       document.body.style.overflow = mql.matches ? 'hidden' : '';
     };
 
-    apply();                              // set initial state
-    mql.addEventListener('change', apply); // update if user resizes
+    apply();
+    mql.addEventListener('change', apply);
 
     return () => {
       mql.removeEventListener('change', apply);
-      document.body.style.overflow = '';   // always restore on unmount
+      document.body.style.overflow = '';
     };
   }, []);
 }

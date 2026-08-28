@@ -11,12 +11,14 @@ export default function Footer() {
 
   return (
     <footer
-      className={`${
-        isProjectDetail ? "" : "md:fixed md:bottom-0 md:left-0 md:w-full md:z-40"
+      className={`relative z-10 ${
+        isProjectDetail
+          ? ""
+          : "md:fixed md:bottom-0 md:left-0 md:w-full md:z-40"
       } bg-midnight text-cloud border-t-2 border-sunset py-4 px-4`}
     >
       <div className="flex flex-row items-center justify-center gap-4 flex-wrap">
-        <p className="text-sm">&copy; 2026 Anna Kuskova. All rights reserved.</p>
+        <p className="text-sm">&copy; 2026 All rights reserved.</p>
 
         <a
           href="mailto:anna.kuskova@email.com"

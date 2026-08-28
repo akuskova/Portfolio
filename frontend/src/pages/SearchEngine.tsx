@@ -1,4 +1,5 @@
 import NightSky from "../components/NightSky";
+import { FaGithub } from "react-icons/fa";
 
 export default function SearchEngine() {
   return (
@@ -25,6 +26,13 @@ export default function SearchEngine() {
         <p className="text-base md:text-xl max-w-2xl text-cloud animate-[fadeInUp_0.6s_ease-out_0.45s_backwards]">
           <span className="font-bold text-sunset">Tech Stack:</span> Python, BeautifulSoup, NLTK, FastAPI, JSONL, seek-based I/O
         </p>
+        <a href="https://github.com/CS121-UCI-2026/cs121-search-engine"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="inline-flex items-center gap-2 border-2 border-moonlight text-moonlight font-bold px-6 py-3 rounded-full hover:border-sunset hover:text-sunset transition animate-[fadeInUp_0.6s_ease-out_0.55s_backwards]">
+        <FaGithub />
+        View on GitHub
+        </a>
       </div>
     </NightSky>
   );

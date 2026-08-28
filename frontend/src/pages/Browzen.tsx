@@ -1,4 +1,5 @@
 import NightSky from "../components/NightSky";
+import { FaGithub } from "react-icons/fa";
 
 export default function Browzen() {
   return (
@@ -25,6 +26,13 @@ export default function Browzen() {
         <p className="text-base md:text-xl max-w-2xl text-cloud animate-[fadeInUp_0.6s_ease-out_0.45s_backwards]">
           <span className="font-bold text-sunset">Tech Stack:</span> Python, FastAPI, Playwright, browser-use, React, WebSockets
         </p>
+        <a href="https://github.com/sneha-byte/VenusHacks2026"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="inline-flex items-center gap-2 border-2 border-moonlight text-moonlight font-bold px-6 py-3 rounded-full hover:border-sunset hover:text-sunset transition animate-[fadeInUp_0.6s_ease-out_0.55s_backwards]">
+        <FaGithub />
+        View on GitHub
+        </a>
       </div>
     </NightSky>
   );

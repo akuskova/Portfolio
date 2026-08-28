@@ -27,6 +27,12 @@ export default function DHA() {
         <p className="text-xl max-w-2xl text-cloud animate-[fadeInUp_0.6s_ease-out_0.45s_backwards]">
           <span className="font-bold text-sunset">Tech Stack:</span> Squarespace, Storepoint, Mapbox, HTML/CSS, JavaScript
         </p>
+        <a href="https://visithamiltonmt.org"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="inline-flex items-center gap-2 border-2 border-moonlight text-moonlight font-bold px-6 py-3 rounded-full hover:border-sunset hover:text-sunset transition animate-[fadeInUp_0.6s_ease-out_0.55s_backwards]">
+        View the Website
+        </a>
       </div>
     </NightSky>
   );
