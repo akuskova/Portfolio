@@ -13,16 +13,20 @@ import { Route, Routes } from "react-router-dom"
 import PageLayout from "./components/PageLayout"
 import ProjectLayout from "./components/ProjectLayout"
 
+
+
 function App() {
   return (
       <>
       <Navbar />
       <Routes>
+        {/* Adds a coloring wrapper to all pages*/}
         <Route element={<PageLayout />}>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<AboutMe />} />
           <Route path="/projects" element={<Projects />} />
           <Route path="/api" element={<API />} />
+          {/* Adds a go-back feature to all project pages*/}
           <Route element={<ProjectLayout />}>
             <Route path="/projects/browzen" element={<Browzen />} />
             <Route path="/projects/starvest" element={<Starvest />} />
@@ -33,7 +37,6 @@ function App() {
       </Routes>
       <Footer />
       </>
-
     )
 
 }

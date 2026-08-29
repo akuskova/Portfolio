@@ -1,7 +1,9 @@
 import { useEffect, useState } from "react"
 import Loading from "../components/LoadingScreen";
 import NightSky from "../components/NightSky";
+import Button from "../components/Button";
 
+// Shape of the photo object fetched 
 interface Photo {
   id: number
   src: { medium: string; large: string }
@@ -17,21 +19,23 @@ export default function API() {
   const [caption, setCaption] = useState<string | null>(null);
   const [captionStatus, setCaptionStatus] = useState<"idle" | "loading" | "loaded" | "error">("idle");
 
+
+  // For the purposes of a picture fetch not appearing twice on user screen in close proximity during a 5 minute session
   const fetchData = async () => {
     try {
-      // 1. Grab the seen IDs from localStorage
+      // Grab the seen IDs from localStorage
       const seenIds: number[] = JSON.parse(localStorage.getItem("seenPhotoIds") || "[]");
       const excludeParam = seenIds.length > 0 ? `?exclude=${seenIds.join(",")}` : "";
       
 
-      // 2. Send them to the server as a query param
+      // Send them to the server as a query param
       const response = await fetch(`${import.meta.env.VITE_API_URL}/api/data${excludeParam}`);
       if (!response.ok) throw new Error(`API responded with ${response.status}`)
       const data : Photo = await response.json()
       setPhoto(data)
       setStatus("loaded")
 
-      // 3. Update the seen list. If server said "exhausted", start a fresh cycle.
+      // Update the seen list. If server said "exhausted", start a fresh cycle.
       if (data.exhausted) {
         localStorage.setItem("seenPhotoIds", JSON.stringify([data.id]));
       } else {
@@ -46,9 +50,11 @@ export default function API() {
       setStatus("error")
     }
   }
+  // Fetches the 
   const fetchCaption = async (imageUrl: string, alt: string) => {
     setCaption(null);
     setCaptionStatus("loading");
+    // sends the server a package of {imageUrl, alt} to  /api/caption endpoint. Backend then calls Claude/OpenAI and returns a caption.
     try {
       const response = await fetch(`${import.meta.env.VITE_API_URL}/api/caption`, {
         method: "POST",
@@ -64,12 +70,13 @@ export default function API() {
       setCaptionStatus("error");
     }
 };
-
+    // Once the page mounts, fetches data from the API
     useEffect(() => {
     // eslint-disable-next-line react-hooks/set-state-in-effect
     fetchData()
     }, [])
   
+    // Fetches data from the new image button click
     const handleClick = () => {
       setStatus("loading");
       fetchData();
@@ -88,7 +95,7 @@ export default function API() {
             className="rounded-lg max-w-xl w-full h-auto animate-[fadeInUp_0.6s_ease-out_0.15s_backwards]"
           />
 
-          {/* Caption row — reserves min-height so button doesn't jump around while caption loads */}
+          {/* Caption row  reserves min-height so button doesn't jump around while caption loads */}
           <div className="max-w-xl min-h-12 flex items-center justify-center animate-[fadeInUp_0.6s_ease-out_0.25s_backwards]">
             {captionStatus === "loading" && (
               <p className="text-white/60 italic">Generating caption…</p>
@@ -103,13 +110,13 @@ export default function API() {
         </>
       )}
 
-      <button
+      <Button
         onClick={handleClick}
         disabled={status === "loading"}
-        className="bg-sunset text-evening px-6 py-3 rounded-full font-bold hover:bg-sunset-glow active:bg-sunset-deep transition disabled:opacity-50 hover:scale-105 active:scale-95 animate-[fadeInUp_0.6s_ease-out_0.35s_backwards]"
+        className="animate-[fadeInUp_0.6s_ease-out_0.35s_backwards] hover:scale-105 active:scale-95"
       >
         {status === "loading" ? "Loading..." : "New Random Image"}
-      </button>
+      </Button>
     </div>
     </NightSky>
   )

@@ -1,6 +1,6 @@
-import { Link } from 'react-router-dom';
 import { useLockScroll } from '../hooks/useLockScroll';
 import NightSky from '../components/NightSky';
+import Button from '../components/Button';
 
 export default function Home() {
     useLockScroll()
@@ -17,16 +17,12 @@ export default function Home() {
             I care most about work that reaches the people software often forgets — accessibility,
             community organizations, and small-scale systems that quietly make hard things easier.
             </p>
-            <p className=" italic text-xl md:text-2xl text-sunset font-semibold">
+            <p className=" italic text-xl md:text-2xl text-sunset font-semibold animate-[fadeInUp_0.6s_ease-out_0.25s_backwards]">
                 I enjoy making things — and love learning how to make them.
             </p>
             <div className="flex gap-4 mt-6 animate-[fadeInUp_0.6s_ease-out_0.35s_backwards]">
-            <Link to="/projects" className=" bg-sunset text-evening font-bold px-6 py-3 rounded-full hover:bg-sunset-glow transition">
-                See projects
-            </Link>
-            <Link to="/about" className=" border border-moonlight text-moonlight font-bold px-6 py-3 rounded-full hover:border-sunset hover:text-sunset transition">
-                About me
-            </Link>
+            <Button to="/projects">See projects</Button>
+            <Button to="/about" variant="secondary">About me</Button>
             </div>
         </div>
 

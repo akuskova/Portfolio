@@ -4,36 +4,34 @@
   --font-sans: 'Space Grotesk', system-ui, sans-serif;
   --font-mono: 'Space Mono', 'Courier New', monospace;
   
-  --color-midnight:     #0f1520;   /* deeper than evening */
+  --color-midnight:     #0f1520;   /* navbar/footer */
   --color-evening:      #192231;   /* page bg */
   --color-stormy:       #494E6B;   /* surfaces */
   --color-storm-light:  #5c6280;   /* surface hover */
-  --color-cloud:        #98878F;   /* muted / secondary text */
-  --color-moonlight:    #e8dfe2;   /* PRIMARY text — new */
+  --color-cloud:        #98878F;   /* secondary text */
+  --color-moonlight:    #e8dfe2;   /* PRIMARY text */
   --color-sunset-deep:  #7a4a58;   /* button pressed */
-  --color-sunset:       #985E6D;   /* accent / CTA */
+  --color-sunset:       #985E6D;   /* accent */
   --color-sunset-glow:  #b47380;   /* button hover */
 }
 
+/* animation */
 @keyframes fadeInUp {
   from { opacity: 0; transform: translateY(20px); }
   to   { opacity: 1; transform: translateY(0); }
 }
-
-@keyframes shimmer {
-  0%   { background-position: -1000px 0; }
-  100% { background-position: 1000px 0; }
+/* fades between 20% and 80% opacity over the animation duration, created winkling for stars */
+@keyframes twinkle {
+  0%, 100% { opacity: 0.2; }
+  50%      { opacity: 0.8; }
 }
-
+/* aurora moves 40px right and 30px up while growing to 110% size at the halfway point */
 @keyframes drift-1 {
   0%, 100% { transform: translate(0, 0) scale(1); }
   50%      { transform: translate(40px, -30px) scale(1.1); }
 }
+/* similar to drift-1 but moves in the opposite direction */
 @keyframes drift-2 {
   0%, 100% { transform: translate(0, 0) scale(1); }
   50%      { transform: translate(-30px, 40px) scale(0.9); }
-}
-@keyframes twinkle {
-  0%, 100% { opacity: 0.2; }
-  50%      { opacity: 0.8; }
 }

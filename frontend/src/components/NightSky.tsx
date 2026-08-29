@@ -41,11 +41,11 @@ export default function NightSky({
       {aurora && (
         <div className="hidden md:block fixed inset-0 pointer-events-none z-0">
           <div
-            className="absolute top-1/4 right-1/4 w-[600px] h-[500px] bg-sunset opacity-20 blur-[140px] rounded-full"
+            className="absolute top-1/4 right-1/4 w-150 h-125 bg-sunset opacity-20 blur-[140px] rounded-full"
             style={{ animation: 'drift-1 14s ease-in-out infinite' }}
           />
           <div
-            className="absolute bottom-1/4 left-1/4 w-[500px] h-[400px] bg-stormy opacity-30 blur-[120px] rounded-full"
+            className="absolute bottom-1/4 left-1/4 w-125 h-100 bg-stormy opacity-30 blur-[120px] rounded-full"
             style={{ animation: 'drift-2 18s ease-in-out infinite' }}
           />
         </div>

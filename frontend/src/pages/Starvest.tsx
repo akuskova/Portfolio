@@ -1,5 +1,6 @@
 import NightSky from "../components/NightSky";
 import { FaGithub } from "react-icons/fa";
+import Button from "../components/Button";
 
 export default function Starvest() {
   return (
@@ -26,13 +27,11 @@ export default function Starvest() {
           <p className="text-base md:text-xl max-w-2xl text-cloud animate-[fadeInUp_0.6s_ease-out_0.45s_backwards]">
             <span className="font-bold text-sunset">Tech Stack:</span> React Native, Expo, satellite data, weather APIs, AI/ML
           </p>
-        <a href="https://github.com/sabaflz/ByteByteByte"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="inline-flex items-center gap-2 border-2 border-moonlight text-moonlight font-bold px-6 py-3 rounded-full hover:border-sunset hover:text-sunset transition animate-[fadeInUp_0.6s_ease-out_0.55s_backwards]">
-        <FaGithub />
-        View on GitHub
-        </a>
+
+
+        <Button href="https://github.com/sneha-byte/VenusHacks2026" target="_blank" variant="secondary" className="animate-[fadeInUp_0.6s_ease-out_0.55s_backwards]">
+                <FaGithub /> View on GitHub
+        </Button>
       </div>
     </NightSky>
   );

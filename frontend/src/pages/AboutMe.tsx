@@ -1,5 +1,6 @@
 import NightSky from "../components/NightSky";
 import { useLockScroll } from "../hooks/useLockScroll";
+import Button from "../components/Button";
 
 export default function AboutMe() {
   useLockScroll();
@@ -30,20 +31,18 @@ export default function AboutMe() {
           </p>
 
           <div className="flex gap-4 justify-center md:justify-start">
-            <a
-              href="mailto:anna.kuskova@email.com"
-              className="bg-sunset text-evening font-bold px-6 py-3 rounded-full hover:bg-sunset-glow transition"
-            >
-              Get in touch
-            </a>
-            <a
-              href="/assets/AnnaKResume.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="border-2 border-moonlight text-moonlight font-bold px-6 py-3 rounded-full hover:border-sunset hover:text-sunset transition"
-            >
-              View resume
-            </a>
+            <Button
+              to="/projects"
+              className="animate-[fadeInUp_0.6s_ease-out_0.55s_backwards]">
+              See projects
+            </Button>
+
+            <Button
+              to="/about"
+              variant="secondary"
+              className="animate-[fadeInUp_0.6s_ease-out_0.55s_backwards]">
+              About me
+            </Button>
           </div>
         </div>
 
