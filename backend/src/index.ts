@@ -62,7 +62,7 @@ app.get('/api/data', async (req, res) => {  //async is a promise to get informat
         .filter(Boolean)
         .map(Number)
     )
-
+    //checks if there are available photos
     const available = cachedPhotos.filter((p) => !excludeIds.has(p.id));
 
     if (available.length === 0) {
