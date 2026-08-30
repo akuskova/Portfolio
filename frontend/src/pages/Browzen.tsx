@@ -9,7 +9,7 @@ export default function Browzen() {
         <h1 className="text-3xl md:text-5xl font-bold text-moonlight">Browzen</h1>
 
         <p className="text-base md:text-xl max-w-2xl text-moonlight animate-[fadeInUp_0.6s_ease-out]">
-          <span className="font-bold text-sunset">Scope:</span> 36-hour hackathon project (VenusHacks 2026), team of 4, owned backend architecture.
+          <span className="font-bold text-sunset">Scope:</span> 36-hour hackathon project (VenusHacks 2026), team of 4, worked on backend architecture.
         </p>
 
         <p className="text-base md:text-xl max-w-2xl text-moonlight animate-[fadeInUp_0.6s_ease-out_0.15s_backwards]">

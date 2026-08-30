@@ -9,7 +9,7 @@ export default function SearchEngine() {
         <h1 className="text-3xl md:text-5xl font-bold text-moonlight">Search Engine (Class Project)</h1>
 
         <p className="text-base md:text-xl max-w-2xl text-moonlight animate-[fadeInUp_0.6s_ease-out]">
-          <span className="font-bold text-sunset">Scope:</span> Built an end-to-end search engine over 56,000 web pages from ICS domains — indexer, ranking, and query interface — with strict memory and latency budgets.
+          <span className="font-bold text-sunset">Scope:</span> TEam of 4 built end-to-end search engine over 56,000 web pages from ICS domains — indexer, ranking, and query interface — with strict memory and latency budgets, over 4 weeks.
         </p>
 
         <p className="text-base md:text-xl max-w-2xl text-moonlight animate-[fadeInUp_0.6s_ease-out_0.15s_backwards]">
