@@ -32,16 +32,16 @@ export default function AboutMe() {
 
           <div className="flex gap-4 justify-center md:justify-start">
             <Button
-              to="/projects"
+              href="mailto:anna.l.kuskova@gmail.com"
               className="animate-[fadeInUp_0.6s_ease-out_0.55s_backwards]">
-              See projects
+              Contact me
             </Button>
 
             <Button
-              to="/about"
+              href="/assets/AnnaKResume.pdf"
               variant="secondary"
               className="animate-[fadeInUp_0.6s_ease-out_0.55s_backwards]">
-              About me
+              View resume
             </Button>
           </div>
         </div>
