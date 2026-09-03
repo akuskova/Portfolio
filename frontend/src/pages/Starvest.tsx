@@ -29,7 +29,7 @@ export default function Starvest() {
           </p>
 
 
-        <Button href="https://github.com/sneha-byte/VenusHacks2026" target="_blank" variant="secondary" className="animate-[fadeInUp_0.6s_ease-out_0.55s_backwards]">
+        <Button href="https://github.com/sabaflz/ByteByteByte" target="_blank" variant="secondary" className="animate-[fadeInUp_0.6s_ease-out_0.55s_backwards]">
                 <FaGithub /> View on GitHub
         </Button>
       </div>
