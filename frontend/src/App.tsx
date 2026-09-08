@@ -8,7 +8,6 @@ import Starvest from "./pages/Starvest"
 import DHA from "./pages/DHA"
 import Home from "./pages/Home"
 import SearchEngine from "./pages/SearchEngine"
-import API from "./pages/API"
 import { Route, Routes } from "react-router-dom"
 import PageLayout from "./components/PageLayout"
 import ProjectLayout from "./components/ProjectLayout"
@@ -25,7 +24,6 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<AboutMe />} />
           <Route path="/projects" element={<Projects />} />
-          <Route path="/api" element={<API />} />
           {/* Adds a go-back feature to all project pages*/}
           <Route element={<ProjectLayout />}>
             <Route path="/projects/browzen" element={<Browzen />} />
