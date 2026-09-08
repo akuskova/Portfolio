@@ -63,7 +63,6 @@ export default function Navbar() {
           <NavLink to="/" end onClick={closeMenu} className={navLinkClass}>Home</NavLink>
           <NavLink to="/about" onClick={closeMenu} className={navLinkClass}>About</NavLink>
           <NavLink to="/projects" onClick={closeMenu} className={navLinkClass}>Projects</NavLink>
-          <NavLink to="/api" onClick={closeMenu} className={navLinkClass}>API</NavLink>
         </div>
       )}
     </nav>
