@@ -46,7 +46,6 @@ export default function Navbar() {
           </div>
         </div>
 
-        <NavLink to="/api" className={navLinkClass}>API</NavLink>
       </div>
 
       <button
