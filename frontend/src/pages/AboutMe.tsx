@@ -40,6 +40,7 @@ export default function AboutMe() {
             <Button
               href="/assets/AnnaKResume.pdf"
               variant="secondary"
+              target="_blank"
               className="animate-[fadeInUp_0.6s_ease-out_0.55s_backwards]">
               View resume
             </Button>
